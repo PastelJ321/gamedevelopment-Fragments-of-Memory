@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwec7usqwyxds"]
+
+[ext_resource type="PackedScene" uid="uid://bevbiu3viudfu" path="res://'너'/'너'.tscn" id="1_skdpy"]
+
+[node name="챕터1본게임" type="Node2D"]
+
+[node name="너" parent="." instance=ExtResource("1_skdpy")]
+position = Vector2(59, 448)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+z_index = -10
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,133 @@
+[gd_scene load_steps=8 format=3 uid="uid://br5mpsevrqr08"]
+
+[ext_resource type="Script" uid="uid://cillkg646tdie" path="res://start/시작화면.gd" id="1_3kn46"]
+[ext_resource type="FontFile" uid="uid://nwqcaap3e686" path="res://asset/font/DNFForgedBlade-Bold.ttf" id="1_fen2i"]
+[ext_resource type="FontFile" uid="uid://ddb744aeqsmrm" path="res://asset/font/DNFForgedBlade-Medium.ttf" id="2_68upb"]
+[ext_resource type="PackedScene" uid="uid://mlqyqraop47f" path="res://background/시작화면바탕화면.tscn" id="3_5v1jt"]
+[ext_resource type="Script" uid="uid://b733i184ax6xg" path="res://start/audio_stream_player_2d.gd" id="5_0rs5w"]
+[ext_resource type="AudioStream" uid="uid://d0skt2wgvjjon" path="res://asset/music/mainsound.ogg" id="5_dvbmi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_68upb"]
+font = ExtResource("1_fen2i")
+font_size = 50
+shadow_color = Color(0, 0, 0, 0.4)
+
+[node name="시작화면" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3kn46")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.198
+anchor_top = 0.126
+anchor_right = 0.198
+anchor_bottom = 0.126
+offset_left = -118.44
+offset_top = -32.72
+offset_right = 119.56
+offset_bottom = 32.28
+grow_horizontal = 2
+grow_vertical = 2
+text = "기억의 편린"
+label_settings = SubResource("LabelSettings_68upb")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.202
+anchor_top = 0.194
+anchor_right = 0.202
+anchor_bottom = 0.194
+offset_left = -223.56
+offset_top = -22.68
+offset_right = 413.44
+offset_bottom = 42.32
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+text = "FRAGMENTS OF MEMORY"
+label_settings = SubResource("LabelSettings_68upb")
+
+[node name="새로운게임" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.123
+anchor_top = 0.352
+anchor_right = 0.123
+anchor_bottom = 0.352
+offset_left = -67.44
+offset_top = -23.44
+offset_right = 66.56
+offset_bottom = 23.56
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_68upb")
+theme_override_font_sizes/font_size = 30
+text = "▶ START"
+
+[node name="불러오기" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.135
+anchor_top = 0.441
+anchor_right = 0.135
+anchor_bottom = 0.441
+offset_left = -82.8
+offset_top = -23.52
+offset_right = 82.2
+offset_bottom = 23.48
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_68upb")
+theme_override_font_sizes/font_size = 30
+text = "CONTINUE
+"
+
+[node name="설정" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.149
+anchor_top = 0.531
+anchor_right = 0.149
+anchor_bottom = 0.531
+offset_left = -100.72
+offset_top = -23.32
+offset_right = 101.28
+offset_bottom = 23.68
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_68upb")
+theme_override_font_sizes/font_size = 30
+text = "⚙ SETTINGS"
+
+[node name="나가기" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.119
+anchor_top = 0.619
+anchor_right = 0.119
+anchor_bottom = 0.619
+offset_left = -62.32
+offset_top = -23.68
+offset_right = 61.68
+offset_bottom = 23.32
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_68upb")
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[node name="시작화면바탕화면" parent="." instance=ExtResource("3_5v1jt")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dvbmi")
+volume_db = 6.933
+script = ExtResource("5_0rs5w")
+
+[connection signal="pressed" from="새로운게임" to="." method="_on_새로운게임_pressed"]

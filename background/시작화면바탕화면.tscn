@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://mlqyqraop47f"]
+
+[ext_resource type="Texture2D" uid="uid://dhb57vc7kf2fm" path="res://background/ChatGPT Image 2025년 8월 3일 오후 06_32_25.png" id="1_65d56"]
+
+[node name="시작화면바탕화면" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.833333, 0.703125)
+texture = ExtResource("1_65d56")
+centered = false
