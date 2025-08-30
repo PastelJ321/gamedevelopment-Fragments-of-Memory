@@ -16,9 +16,9 @@ func _physics_process(delta):
 		velocity.y = 0
 	if Input.is_action_pressed("왼쪽") == false && Input.is_action_pressed("오른쪽") == false || Input.is_action_pressed("왼쪽") && Input.is_action_pressed("오른쪽"):
 		velocity.x = 0
-	if velocity.y < 0:
+	if velocity.y < 0 && velocity.x == 0:
 		스프라이트.play("위")
-	if velocity.y > 0:
+	if velocity.y > 0 && velocity.x == 0:
 		스프라이트.play("아래")
 	if velocity.x < 0:
 		스프라이트.play("왼쪽")
