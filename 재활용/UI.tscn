@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0bmv0rln0hfk"]
+
+[ext_resource type="Script" uid="uid://be1n630y1n1ix" path="res://재활용/ui.gd" id="1_oq1uc"]
+[ext_resource type="FontFile" uid="uid://embs2m8omrwq" path="res://asset/font/NEXON Lv2 Gothic.ttf" id="2_ytgqn"]
+
+[node name="Ui" type="CanvasLayer"]
+script = ExtResource("1_oq1uc")
+
+[node name="NotificationPanel" type="Panel" parent="."]
+visible = false
+offset_left = 1.0
+offset_top = 28.0
+offset_right = 1281.0
+offset_bottom = 135.0
+
+[node name="NotificationLabel" type="RichTextLabel" parent="NotificationPanel"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 26.0
+offset_right = 941.0
+offset_bottom = 66.0
+theme_override_fonts/normal_font = ExtResource("2_ytgqn")
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+
+[node name="NotificationTimer" type="Timer" parent="."]
