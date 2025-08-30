@@ -1,11 +1,12 @@
 extends Area2D
 
 @onready var sprite = $AnimatedSprite2D
-@onready var interaction_label = $"../InteractionUI/Label"
+@onready var interaction_label = $"../InteractionUI"
 @onready var dialogue_ui = $"../DialogueUI/Panel"
 @onready var portrait = $"../DialogueUI/Panel/TextureRect"
 @onready var dialogue_text = $"../DialogueUI/Panel/Label"
-
+@onready var sfx_player = $"../대사넘김 효과음"
+@onready var cutscene_player = $"../챕터1_본게임진입"
 # 플레이어가 범위 안에 있는지 여부
 var player_in_range = false
 # 현재 대화가 활성화되었는지 여부
@@ -55,8 +56,7 @@ func start_dialogue():
 	dialogue_text.text = dialogue_lines[dialogue_index]
 	
 	# 상호작용 애니메이션/사운드 재생
-	$"../피아노소녀 상호작용".play("상호작용")
-
+	sfx_player.play()
 
 # 다음 대사로 넘어가는 함수
 func advance_dialogue():
@@ -67,11 +67,15 @@ func advance_dialogue():
 	if dialogue_index < dialogue_lines.size():
 		# 다음 대사를 Label에 표시합니다.
 		dialogue_text.text = dialogue_lines[dialogue_index]
+		sfx_player.play()
 	# 모든 대사가 끝났다면
 	else:
 		# 대화를 종료합니다.
 		end_dialogue()
+		cutscene_player.play("new_animation")
+		await get_tree().create_timer(5).timeout
 		get_tree().change_scene_to_file("res://챕터1/챕터1_본게임.tscn")
+		
 
 # 대화 종료 함수
 func end_dialogue():

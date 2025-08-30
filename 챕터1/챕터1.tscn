@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://dii15jg5ix8p3"]
+[gd_scene load_steps=35 format=3 uid="uid://dii15jg5ix8p3"]
 
+[ext_resource type="Script" uid="uid://m0yliks2ghlo" path="res://챕터1/챕터1.gd" id="1_eaxxv"]
 [ext_resource type="PackedScene" uid="uid://bevbiu3viudfu" path="res://'너'/'너'.tscn" id="1_gofqw"]
 [ext_resource type="Texture2D" uid="uid://dwkyr27m0grnf" path="res://asset/green-wood.png" id="2_ngr6u"]
 [ext_resource type="Texture2D" uid="uid://cfpw7214dvfgd" path="res://asset/dark-wood.png" id="3_cdb4n"]
@@ -9,7 +10,13 @@
 [ext_resource type="Script" uid="uid://b8jsukirnlgvc" path="res://챕터1/audio_stream_player_2d.gd" id="5_h7o38"]
 [ext_resource type="FontFile" uid="uid://dfguge002lq2d" path="res://asset/font/NEXON Lv2 Gothic Medium.ttf" id="5_nui3j"]
 [ext_resource type="Texture2D" uid="uid://bkldhfyh76xls" path="res://asset/ChatGPT Image 2025년 8월 15일 오후 06_51_50.png" id="6_nui3j"]
+[ext_resource type="Texture2D" uid="uid://cqkm2nt0wx1h" path="res://asset/keyboad/pxkw_w.png" id="8_nshnd"]
 [ext_resource type="Texture2D" uid="uid://sq8flivs5gnq" path="res://asset/Piano.png" id="8_x4ot4"]
+[ext_resource type="Texture2D" uid="uid://6jkjiixjxqtd" path="res://asset/keyboad/pxkw_a.png" id="9_2rnj6"]
+[ext_resource type="Texture2D" uid="uid://b3yegghvrulj" path="res://asset/keyboad/pxkw_s.png" id="10_cp3o7"]
+[ext_resource type="AudioStream" uid="uid://2a743nhm3pnj" path="res://asset/sound effect/Blip17.wav" id="11_0merb"]
+[ext_resource type="Texture2D" uid="uid://be2n2lqyc5kkm" path="res://asset/keyboad/pxkw_d.png" id="11_b43g4"]
+[ext_resource type="Texture2D" uid="uid://dfdl501e4shti" path="res://asset/keyboad/pxkw_space_4.png" id="15_b5wf6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdb4n"]
 size = Vector2(1104, 159)
@@ -40,19 +47,67 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:stream")
+tracks/0/path = NodePath("CanvasLayer/w:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_ds5he")]
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/a:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/s:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/d:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Label2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_i6sf1"]
 resource_name = "RESET"
-length = 20.0
+length = 21.0
 capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -129,14 +184,62 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:stream")
+tracks/6/path = NodePath("CanvasLayer/w:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
+"times": PackedFloat32Array(0, 14.724, 15.014, 21),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [false, false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/a:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 14.724, 15.014, 21),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [false, false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/s:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 14.724, 15.014, 21),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [false, false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/d:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 14.724, 15.014, 21),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [false, false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/Label2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 14.724, 15.014),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i6sf1"]
@@ -163,7 +266,45 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_eaxxv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0merb"]
+resource_name = "new_animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.980392)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ei2a5"]
+_data = {
+&"RESET": SubResource("Animation_eaxxv"),
+&"new_animation": SubResource("Animation_0merb")
+}
+
 [node name="챕터1" type="Node2D"]
+script = ExtResource("1_eaxxv")
 
 [node name="너" parent="." instance=ExtResource("1_gofqw")]
 z_index = 1
@@ -514,19 +655,11 @@ script = ExtResource("5_h7o38")
 z_index = 2
 offset_right = 1280.0
 offset_bottom = 720.0
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-z_index = -10
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(833, 277)
-zoom = Vector2(2, 2)
+position = Vector2(640, 360)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -539,8 +672,46 @@ offset_bottom = 636.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_i6sf1")
 theme_override_font_sizes/font_size = 40
-text = "널.. 기다리고"
 metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(1, 1, 1, 0)
+
+[node name="w" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(350, 200)
+scale = Vector2(3, 3)
+texture = ExtResource("8_nshnd")
+
+[node name="a" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(300, 250)
+scale = Vector2(3, 3)
+texture = ExtResource("9_2rnj6")
+
+[node name="s" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(350, 250)
+scale = Vector2(3, 3)
+texture = ExtResource("10_cp3o7")
+
+[node name="d" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(400, 250)
+scale = Vector2(3, 3)
+texture = ExtResource("11_b43g4")
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 325.0
+offset_top = 280.0
+offset_right = 377.0
+offset_bottom = 315.0
+theme_override_fonts/font = ExtResource("5_nui3j")
+theme_override_font_sizes/font_size = 30
+text = "이동"
 
 [node name="피아노소녀" type="Area2D" parent="."]
 position = Vector2(857, 315)
@@ -560,14 +731,22 @@ animation = &"look_piano"
 
 [node name="Label" type="Label" parent="InteractionUI"]
 z_index = 3
-offset_left = 519.0
-offset_top = 196.0
-offset_right = 705.0
-offset_bottom = 231.0
+anchors_preset = -1
+anchor_left = -0.0710938
+anchor_right = -0.0710938
+offset_left = 649.0
+offset_top = 262.0
+offset_right = 835.0
+offset_bottom = 297.0
 theme_override_fonts/font = ExtResource("5_nui3j")
 theme_override_font_sizes/font_size = 30
-text = "[스페이스] 대화"
+text = "상호작용"
 metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractionUI"]
+position = Vector2(667, 237)
+scale = Vector2(3, 3)
+texture = ExtResource("15_b5wf6")
 
 [node name="DialogueUI" type="CanvasLayer" parent="."]
 
@@ -616,6 +795,14 @@ offset_top = 540.0
 offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0.0748255, 0.0293138, 0.0717633, 0.588235)
+
+[node name="대사넘김 효과음" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_0merb")
+
+[node name="챕터1_본게임진입" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ei2a5")
+}
 
 [connection signal="body_entered" from="피아노소녀" to="피아노소녀" method="_on_body_entered"]
 [connection signal="body_exited" from="피아노소녀" to="피아노소녀" method="_on_body_exited"]
