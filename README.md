@@ -1,5 +1,5 @@
 # 기억의 편린 (Fragments of Memory)
-
+![image](https://github.com/user-attachments/assets/4e9450eb-14a5-487c-a5cf-db10fed2e535)
 English
 ## 🎮 Game Overview
 "Fragments of Memory" is a pixel art adventure game with a mysterious and dreamlike atmosphere.  
